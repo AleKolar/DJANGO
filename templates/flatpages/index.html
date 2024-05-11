@@ -1,24 +1,25 @@
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{% block title %} {% endblock %}</title>
-  {% block css_additional %} {% endblock %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ flatpage.title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Flatpages</a>
+      </div>
+    </div>
+  </nav>
+  <h1>{{ flatpage.title }}</h1>
   <div class="container">
-    <h1 class="text-center">Привет Django</h1>
-    <img class="w-50 mx-auto d-block" src="{% static 'img/Django.jpg' %}" alt="photo">
-    {% block pic_additional %} {% endblock %}
+    <h1 class="text-center">{{ flatpage.content }}</h1>
+    <img class="w-50 mx-auto d-block" src="{% static 'img/Django.png' %}" alt="photo">
   </div>
 </body>
 </html>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-14 text-center">
-            {% block content %} {{ flatpage.content }} {% endblock %}
-        </div>
-    </div>
-</div>
-</html>
-
