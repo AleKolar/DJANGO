@@ -1,5 +1,10 @@
-.custom {
-    color:#007bff;
-    background:#000000;
-    font-size:20px;
+.colored {
+  /* фон */
+  background: #000;
+  /* межстрочное расстояние */
+  line-height: 1;
+  /* подключаем сетку */
+  display: grid;
+  /* ставим содержимое в центр */
+  place-items: center;
 }
